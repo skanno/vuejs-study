@@ -10,7 +10,7 @@
 export default {
   name: 'HelloWorld',
   props: {
-    titme: String,
+    title: String,
     num: Number
   },
   data() {
