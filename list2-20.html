@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <style>
+    .red {
+        font-size: 32pt;
+        font-weight: plain;
+        font-style: normal;
+        color: red;
+    }
+    .blue {
+        font-size: 24pt;
+        font-weight: bold;
+        font-style: italic;
+        color: blue;
+    }
+    </style>
+    <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
+    <div id="app" class="container">
+        <p :class="classes">{{message}}</p>
+    </div>
+</body>
+<script>
+var classObj = {
+    red: true,
+    blue: false
+};
+
+const appdata = {
+    data() {
+        return {
+            message: null,
+            classes: classObj
+        }
+    },
+    mounted() {
+        this.message = 'This is sample page.';
+
+        setInterval(() => {
+            this.classes.red = !classObj.red;
+            this.classes.blue = !classObj.blue;
+        }, 1000);
+    }
+}
+
+Vue.createApp(appdata).mount('#app');
+</script>
+</html>

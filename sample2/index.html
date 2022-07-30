@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script type="module">
+import { ClassB } from './index.js';
+
+var obj = new ClassB();
+console.log(obj.getName());
+
+import { funcB } from './index.js';
+console.log(funcB());
+
+import { constB } from './index.js';
+console.log(constB);
+
+</script>
+</body>
+</html>

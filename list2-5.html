@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <h1>Vue3</h1>
+    <div id="app">{{ message + ' [' + new Date().toLocaleString() + ']' }}</div>
+    <hr>
+    <button onclick="doAction()">Stop</button>
+</body>
+<script>
+let timer = null;
+
+function doAction() {
+    clearInterval(timer);
+}
+
+const appdata = {
+    data() {
+        return {
+            message: ''
+        }
+    },
+    created() {
+        this.message = 'Hello, Vue!';
+        this.count = 0;
+    },
+    mounted() {
+        timer = setInterval(() => {
+            this.count++;
+            this.message = 'Count: ' + this.count;
+        }, 1000);
+    }
+}
+
+Vue.createApp(appdata).mount('#app');
+</script>
+</html>
