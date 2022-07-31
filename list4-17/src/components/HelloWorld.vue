@@ -1,7 +1,7 @@
 <template>
   <div class="alert alert-primary">
     <h1>{{ title }}</h1>
-    <pre v-on:click="crear">{{ message }}</pre>
+    <pre v-on:click="cliar">{{ message }}</pre>
   </div>
   <hr>
   <div id="out" class="out" v-on:click="a_event">A
@@ -31,7 +31,7 @@ export default {
     c_event(event) {
       this.message += "C-Event [" + event.target.id + " → " + event.currentTarget.id + "]\n";
     },
-    crear() {
+    cliar() {
       this.message = 'イベントの伝搬について。\n';
     }
   }
