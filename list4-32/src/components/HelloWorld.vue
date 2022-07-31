@@ -29,22 +29,6 @@ export default {
   methods: {
     doAction() {
       this.flg = !this.flg;
-    },
-    startAction() {
-      if (this.flg) {
-        this.message = '現れます・・・・';
-      } else {
-        this.message = '消えます・・・・';
-      }
-    },
-    endAction() {
-      if (this.flg) {
-        this.btn = 'Hide';
-        this.message = '現れました。';
-      } else {
-        this.btn = 'Show';
-        this.message = '消えました。';
-      }
     }
   }
 }
