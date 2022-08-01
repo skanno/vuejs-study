@@ -1,0 +1,28 @@
+<template>
+  <div class="alert alert-primary">
+    <h1>{{title}}</h1>
+    <p>{{data.msg}} ({{data.count}})</p>
+  </div>
+</template>
+
+<script>
+import {reactive} from 'vue';
+
+export default {
+  props: {
+    title: String
+  },
+  setup(props) {
+    const data = reactive({
+      msg: 'This is ref-value!',
+      count: 0
+    });
+
+    setInterval(() => {
+      data.count++;
+    }, 1000);
+    console.log(data);
+    return {data};
+  }
+}
+</script>
