@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+  <script type="module">
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyALsuoMsnb32oPWkv8oOyDVYoqHNw2XXOA",
+      authDomain: "vue3-study-5295f.firebaseapp.com",
+      databaseURL: "https://vue3-study-5295f-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "vue3-study-5295f",
+      storageBucket: "vue3-study-5295f.appspot.com",
+      messagingSenderId: "867136000142",
+      appId: "1:867136000142:web:0634733070b3c7e83779df"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+  <h1 class="bg-secondary text-white h4 p-3">Vue3 Vite</h1>
+  <div id="app" class="container"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
